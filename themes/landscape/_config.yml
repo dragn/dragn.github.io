@@ -1,0 +1,27 @@
+# Header
+menu:
+  Blog: /
+  About Me: /About-Me
+  Archives: /archives
+rss: /atom.xml
+
+# Content
+excerpt_link: Read More
+fancybox: true
+
+# Sidebar
+sidebar: right
+widgets:
+- category
+- tag
+- tagcloud
+- archive
+- recent_posts
+
+# Miscellaneous
+google_analytics:
+favicon: /favicon.png
+twitter: dsabelnikov
+google_plus: DanielSabelnikov1
+fb_admins:
+fb_app_id:
