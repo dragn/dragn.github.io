@@ -1,6 +1,8 @@
 title: Useful git-commit hook
 date: 2014-08-13 14:23:15
 tags:
+- git
+- git-hooks
 ---
 Here is a useful git usage tip.
 
@@ -13,6 +15,7 @@ Sometimes we all make changes in code that we don't want to commit. For example:
 
 You may do this to test some things locally, but If you forget and push something like this to remote, bad things may happen.
 There is a simple solution to this problem involving pre-commit hook. Specify some string tag to mark the changes you never-never want to commit, I use **do-not-commit**.
+<!-- more -->
 Now, when you do some bad changes add this tag in commentary, like this:
 
 ``` java
