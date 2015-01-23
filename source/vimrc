@@ -163,3 +163,6 @@ map <C-S-RIGHT> :vertical resize -10<CR>
 
 " set type javascript for *.bemhtml files
 au BufNewFile,BufRead *.bemhtml setf javascript
+
+" set type markdown for *.md files
+au BufNewFile,BufReadPost *.md set filetype=markdown
