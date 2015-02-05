@@ -10,23 +10,30 @@ echo "Installing pathogen..."
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
   curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
+cd ~/.vim/bundle
+
 # NERDTree
 #
 echo "NERDTree..."
-cd ~/.vim/bundle
 curl -sSL https://github.com/scrooloose/nerdtree/archive/master.zip -o master.zip
 unzip -qu master.zip
 rm master.zip
 
 # vim-javascript
 #
-echo "vim-javascript"
-cd ~/.vim/bundle
+echo "vim-javascript..."
 curl -sSL https://github.com/dragn/vim-javascript/archive/master.zip -o master.zip
 unzip -qu master.zip
 rm master.zip
 
-# install neat-vimrc
+# MRU
+#
+echo "MRU..."
+curl -sSL https://github.com/yegappan/mru/archive/master.zip -o master.zip
+unzip -qu master.zip
+rm master.zip
+
+# install vimrc
 #
 echo "and finally, .vimrc"
 curl -sSL https://dragn.github.io/vimrc -o ~/.vimrc

@@ -139,6 +139,9 @@ map <F3> :w<CR>
 " F4 formats and saves file
 map <F4> gg=G'':w<CR>
 
+" F5 opens up most-recently used files listing
+map <F5> :MRU<CR>
+
 " Ctrl-W closes current window
 map <C-W> :close<CR>
 
