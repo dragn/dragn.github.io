@@ -40,6 +40,13 @@ curl -sSL https://github.com/bronson/vim-trailing-whitespace/archive/master.zip 
 unzip -qu master.zip
 rm master.zip
 
+# Trailing whitespaces
+#
+echo "vim-istanbul..."
+curl -sSL https://github.com/juanpabloaj/vim-istanbul/archive/master.zip -o master.zip
+unzip -qu master.zip
+rm master.zip
+
 # install vimrc
 #
 echo "and finally, .vimrc"

@@ -142,6 +142,10 @@ map <F4> gg=G'':w<CR>
 " F5 opens up most-recently used files listing
 map <F5> :MRU<CR>
 
+" F6 show javascript code coverage
+let g:coverage_json_path = './coverage.json'
+map <F6> :IstanbulShow<CR>
+
 " Ctrl-W closes current window
 map <C-W> :close<CR>
 
@@ -164,8 +168,11 @@ map <ESC>[1;9B :wincmd j<CR>
 map <C-S-LEFT> :vertical resize +10<CR>
 map <C-S-RIGHT> :vertical resize -10<CR>
 
-" set type javascript for *.bemhtml files
+" ===== Auto Commands =====
+
+" set type javascript for *.bemhtml/*.bemtree files
 au BufNewFile,BufRead *.bemhtml setf javascript
+au BufNewFile,BufRead *.bemtree setf javascript
 
 " set type markdown for *.md files
 au BufNewFile,BufReadPost *.md set filetype=markdown
