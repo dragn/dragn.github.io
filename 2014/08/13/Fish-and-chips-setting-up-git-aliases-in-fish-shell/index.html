@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Fish and chips: setting up git aliases in fish-shell | dragn&#39;s lair</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Fish-shell is my favorite shell.Setting init commands for fish differs from the other shells. You need to add command to ~/.config/fish/config.fish.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Fish and chips: setting up git aliases in fish-shell">
+<meta property="og:url" content="http://blog.dragn.me/2014/08/13/Fish-and-chips-setting-up-git-aliases-in-fish-shell/index.html">
+<meta property="og:site_name" content="dragn's lair">
+<meta property="og:description" content="Fish-shell is my favorite shell.Setting init commands for fish differs from the other shells. You need to add command to ~/.config/fish/config.fish.">
+<meta property="og:updated_time" content="2015-07-06T08:32:53.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Fish and chips: setting up git aliases in fish-shell">
+<meta name="twitter:description" content="Fish-shell is my favorite shell.Setting init commands for fish differs from the other shells. You need to add command to ~/.config/fish/config.fish.">
+<meta name="twitter:creator" content="@dsabelnikov">
+<link rel="publisher" href="DanielSabelnikov1">
+  
+    <link rel="alternative" href="/atom.xml" title="dragn&#39;s lair" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">dragn&#39;s lair</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">coding notes by Daniel Sabelnikov</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Blog</a>
+        
+          <a class="main-nav-link" href="/About-Me">About Me</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <a id="nav-linkedin-link" class="nav-icon" href="https://ru.linkedin.com/pub/daniel-sabelnikov/63/640/678/"></a>
+        <a id="nav-twitter-link" class="nav-icon" href="https://twitter.com/dsabelnikov"></a>
+        <a id="nav-googleplus-link" class="nav-icon" href="https://plus.google.com/+DanielSabelnikov1"></a>
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.dragn.me"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Fish-and-chips-setting-up-git-aliases-in-fish-shell" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/08/13/Fish-and-chips-setting-up-git-aliases-in-fish-shell/" class="article-date">
+  <time datetime="2014-08-13T12:28:18.000Z" itemprop="datePublished">Aug 13 2014</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Fish and chips: setting up git aliases in fish-shell
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://fishshell.com/" target="_blank" rel="external">Fish-shell</a> is my favorite shell.<br>Setting init commands for fish differs from the other shells. You need to add command to <strong>~/.config/fish/config.fish</strong>.<br><a id="more"></a></p>
+<p>For example, you can add following useful aliases for git:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> st=<span class="string">'git status'</span></span><br><span class="line"><span class="built_in">alias</span> di=<span class="string">'git diff'</span></span><br><span class="line"><span class="built_in">alias</span> <span class="built_in">log</span>=<span class="string">'git log -10 --oneline'</span></span><br><span class="line"><span class="built_in">alias</span> push=<span class="string">'git push'</span></span><br><span class="line"><span class="built_in">alias</span> pull=<span class="string">'git pull'</span></span><br></pre></td></tr></table></figure></p>
+<p>Here is a copy-paste snippet to run in the shell:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"</span><br><span class="line"># git aliases</span><br><span class="line">alias st='git status'</span><br><span class="line">alias di='git diff'</span><br><span class="line">alias log='git log -10 --oneline'</span><br><span class="line">alias push='git push'</span><br><span class="line">alias pull='git pull'"</span> &gt;&gt; ~/.config/fish/config.fish</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.dragn.me/2014/08/13/Fish-and-chips-setting-up-git-aliases-in-fish-shell/" data-id="cibrphy1s0009gpulhbai0jxa" class="article-share-link">Share</a>
+      
+        <a href="http://blog.dragn.me/2014/08/13/Fish-and-chips-setting-up-git-aliases-in-fish-shell/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fish-shell/">fish-shell</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2014/09/17/Quick-tip-fish-shell-PATH/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Quick tip: fish-shell PATH
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014/08/13/Useful-git-commit-hook/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Useful git-commit hook</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/fish-shell/">fish-shell</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-hooks/">git-hooks</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gridfs/">gridfs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/meteor/">meteor</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mongo/">mongo</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/fish-shell/" style="font-size: 20px;">fish-shell</a> <a href="/tags/git/" style="font-size: 20px;">git</a> <a href="/tags/git-hooks/" style="font-size: 10px;">git-hooks</a> <a href="/tags/gridfs/" style="font-size: 10px;">gridfs</a> <a href="/tags/meteor/" style="font-size: 10px;">meteor</a> <a href="/tags/mongo/" style="font-size: 10px;">mongo</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">August 2014</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/07/06/Store-files-to-GridFS-in-Meteor-app/">Store files to GridFS in Meteor app</a>
+          </li>
+        
+          <li>
+            <a href="/2014/09/17/Quick-tip-fish-shell-PATH/">Quick tip: fish-shell PATH</a>
+          </li>
+        
+          <li>
+            <a href="/2014/08/13/Fish-and-chips-setting-up-git-aliases-in-fish-shell/">Fish and chips: setting up git aliases in fish-shell</a>
+          </li>
+        
+          <li>
+            <a href="/2014/08/13/Useful-git-commit-hook/">Useful git-commit hook</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 Daniel Sabelnikov<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Blog</a>
+  
+    <a href="/About-Me" class="mobile-nav-link">About Me</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'dragngithubio';
+  
+  var disqus_url = 'http://blog.dragn.me/2014/08/13/Fish-and-chips-setting-up-git-aliases-in-fish-shell/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+  </div>
+</body>
+</html>
